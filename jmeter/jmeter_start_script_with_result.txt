@@ -1,0 +1,1 @@
+D:\Programs\install_qa_tools\apache-jmeter-5.4.1\bin>java -jar .\ApacheJMeter.jar -n -t D:\Programs\install_qa_tools\LoadTestAPI.jmx -l testresult.jtl
