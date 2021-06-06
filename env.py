@@ -20,29 +20,29 @@ def post_req(user_name):
     "phone": "380551233211",
     "userStatus": 99})
     r = requests.post (url,headers=headers,data = data1)
-    return (print (r.text))
+    return (r)
 
 response = post_req("testuser1")
-print (response)
-#print (response.json()['code']) - not working
-#print (response.json()['type' == 'unknown'])
-#print (response.status_code == 200)
+print (response.json())
+print (response.json()['code'])
+print (response.json()['type'] == 'unknown')
+print (response.status_code == 200)
 
 #Why this is not working?
-def post_req1(user_name):
-    data_payload = dict (id = 255,
-    username = 'testuser',
-    firstname = 'testuser1',
-    lastname = 'testuser11',
-    email = 'test@gmail.com',
-    password = 'Qwerty123',
-    phone = '380551233211',
-    userstatus = 99)
-    r1 = requests.post (url,headers=headers,data = data_payload)
-    return (print (r1.text))
+#def post_req1(user_name):
+    #data_payload = dict (id = 255,
+    #username = 'testuser',
+    #firstname = 'testuser1',
+    #lastname = 'testuser11',
+    #email = 'test@gmail.com',
+    #password = 'Qwerty123',
+    #phone = '380551233211',
+    #userstatus = 99)
+    #r1 = requests.post (url,headers=headers,data = data_payload)
+    #return (print (r1.text))
 
-check = post_req1("testuser2")
-print (check)
+#check = post_req1("testuser2")
+#print (check)
 
 def get_request (name):
     return requests.get (url + f"{name}",headers=headers)
